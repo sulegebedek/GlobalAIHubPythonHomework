@@ -1,0 +1,11 @@
+num1= input("Please enter a number: ")
+num2= input("Please enter a number: ")
+num3= input("Please enter a number: ")
+num4= input("Please enter a number: ")
+num5= input("Please enter a number: ")
+
+print(f"\nnum1_Type:{type(num1)}\nnum2_Type:{type(num2)}\nnum3_Type:{type(num3)}\nnum4_Type:{type(num4)}\nnum5_Type:{type(num5)}")
+
+'''
+print("\nvalue1:{} ".format(type(num1))+"\nvalue2:{} ".format(type(num2))+"\nvalue3:{} ".format(type(num3))+"\nvalue4:{} ".format(type(num4))+"\nvalue5:{} ".format(type(num5)))
+'''
