@@ -1,0 +1,16 @@
+list= []
+fırst_name = list.append(input("Enter your fırst name: "))
+last_name = list.append(input("Enter your last name: "))
+age = list.append(int(input("Enter your age: ")))
+year = list.append(int(input("Enter your date of birth(just year): ")))
+
+list2= ["Fırst name: ","Last name: ","Age: ","Date of birth: "]
+print("\n\n")
+
+for i in range(0,4,1):
+  print( list2[i] + str(list[i]))
+
+if list[2] < 18 :
+  print("\nYou can't go out because it's too dangerous.")
+else:
+  print("\nYou can go out to the street")
