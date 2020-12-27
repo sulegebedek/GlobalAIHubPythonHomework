@@ -1,0 +1,84 @@
+name="Sule"
+surname="Gebedek"
+
+for i in range(1,4,1): 
+
+  name_input = input("Enter your name: ")
+  surname_input = input("Enter your surname: ") 
+
+  if (name != name_input and surname == surname_input):
+    print("Please check your name. You have "+str(3-i) +" entry left.")
+    
+  elif(name == name_input and surname != surname_input):
+    print("Please check your surname. You have "+str(3-i) +" entry left.")
+    
+  elif(name != name_input and surname != surname_input):
+    print("Please check your name and surname. You have "+str(3-i) +" entry left.")
+    
+  else:
+    print("\nWELCOME\n")
+    
+    lessons =[]
+    lesson1= lessons.append(input("Enter lesson 1:"))
+    lesson2= lessons.append(input("Enter lesson 2:"))
+    lesson3= lessons.append(input("Enter lesson 3:"))
+    lesson4= lessons.append(input("Enter lesson 4:"))
+    lesson5= lessons.append(input("Enter lesson 5:"))
+  
+
+    print("\n LECTURES LİST\n lesson-1: " +lessons[0] + "\n lesson-2: " +lessons[1] + "\n lesson-3: " +lessons[2]+ "\n lesson-4: " +lessons[3]+ "\n lesson-5: " +lessons[4] )
+
+    print("\nChoose a minimum of 3 and a maximum of 5 lessons.")
+    print("\nIf your selection is finished, press the '0' key.\n")
+
+    choice=[]
+    for  j in range(0,5,1):
+      selection1 = int(input(str(j+1) + ".Enter your choice:"))
+      if selection1 != 0:
+        choice.append(lessons[selection1-1])
+      
+      elif selection1 == 0:
+        print("\nYour selection is complete.\n")
+        break
+    
+    if j < 3 :
+      print("YOU FAILED IN CLASS!\n\n")
+      break
+
+    h=1
+    for k in (choice):
+      print("lesson"+str(h)+": " +str(k))
+      h=h+1
+    
+    selection2 = int(input("Choose one of these lessons and take an exam:"))
+    
+    print("\nChosen lesson: "+ choice[selection2-1])
+    
+    midterm = int(input("Midterm exam:"))
+    final = int(input("Final exam:"))
+    project = int(input("Project note:"))
+
+    dictionary = {"midterm": midterm,"final": final, "project":project}
+    print("\nDictionary: "+ str(dictionary))
+    
+    grade= float(midterm) * 0.3 + float(final) * 0.5 + float(project) * 0.2
+    print("\nGrade: "+str(grade))
+    
+    if grade >= 90 :
+      print("AA")
+      break
+    elif 90 > grade >= 70 :
+      print("BB")
+      break
+    elif 70 > grade >= 50 :
+      print("CC")
+      break
+    elif 50 > grade >= 30 :
+      print("DD")
+      break
+    elif 30 > grade :
+      print("FF \nYou failed in lesson!")
+      break
+
+if i == 3  :
+  print("\nPLEASE TRY AGAİN LATER!") 
